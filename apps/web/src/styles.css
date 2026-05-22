@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --app-ink: #0f172a;
+  --app-muted: #64748b;
+  --app-line: rgba(15, 23, 42, 0.1);
+  --app-card: rgba(255, 255, 255, 0.82);
+  --app-card-strong: rgba(255, 255, 255, 0.94);
+  --app-hover: rgba(15, 23, 42, 0.055);
+  --app-primary: #2563eb;
+  --app-accent: #0f766e;
+  --app-bg:
+    radial-gradient(circle at 8% 4%, rgba(20, 184, 166, 0.15), transparent 34%),
+    radial-gradient(circle at 78% 0%, rgba(37, 99, 235, 0.14), transparent 38%),
+    linear-gradient(180deg, #f8fafc 0%, #eef2f7 54%, #f8fafc 100%);
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--app-bg);
+  color: var(--app-ink);
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font: inherit;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+::selection {
+  background: rgba(37, 99, 235, 0.16);
+}
+
+button,
+input,
+select,
+textarea {
+  letter-spacing: 0;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid rgba(37, 99, 235, 0.35);
+  outline-offset: 2px;
+}
+
+.app-shell {
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.58), transparent 38%),
+    var(--app-bg);
+}
+
+.sidebar-shell {
+  background: rgba(255, 255, 255, 0.72);
+  border-color: var(--app-line);
+  box-shadow: 18px 0 42px -36px rgba(15, 23, 42, 0.48);
+  backdrop-filter: blur(18px);
+}
+
+.brand-mark {
+  background:
+    linear-gradient(135deg, rgba(37, 99, 235, 0.96), rgba(15, 118, 110, 0.94));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.38),
+    0 12px 24px -16px rgba(37, 99, 235, 0.8);
+}
+
+.nav-button {
+  border: 1px solid transparent;
+  transition:
+    background-color 0.16s ease,
+    border-color 0.16s ease,
+    color 0.16s ease,
+    transform 0.16s ease,
+    box-shadow 0.16s ease;
+}
+
+.nav-button:hover {
+  transform: translateY(-1px);
+}
+
+.nav-button-active {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.11), rgba(15, 118, 110, 0.11));
+  border-color: rgba(37, 99, 235, 0.22);
+  color: #1d4ed8;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.62);
+}
+
+.page-main {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.44), rgba(255, 255, 255, 0));
+}
+
+tbody tr {
+  transition: background-color 0.14s ease;
+}
+
+tbody tr:hover {
+  background: rgba(248, 250, 252, 0.86);
+}
+
+::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.28);
+  border: 3px solid transparent;
+  border-radius: 999px;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(100, 116, 139, 0.42);
+}

@@ -1,0 +1,52 @@
+# Dependencies
+node_modules/
+**/node_modules/
+.pnpm-store/
+
+# Build outputs and caches
+dist/
+**/dist/
+apps/web/dist/
+.vite/
+**/.vite/
+.turbo/
+.cache/
+coverage/
+*.tsbuildinfo
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Runtime data
+data/
+apps/server/data/
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+
+# Local media and recordings
+*.mp4
+*.mov
+*.mkv
+*.webm
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.codex-*.log
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
